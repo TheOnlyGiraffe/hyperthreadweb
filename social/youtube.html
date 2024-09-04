@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loading...</title>
+  <link rel="stylesheet" href="social.css">
+  <style>
+    body {
+      background: #2d2d2d;
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="loading">
+    <div class="loading-dot"></div>
+    <div class="loading-dot"></div>
+    <div class="loading-dot"></div>
+    <div class="loading-dot"></div>
+  </div>
+  
+  <div class="ray-id" id="rayIdInfo">
+    Ray ID: <span class="blurred" id="blurredRayId">*****************</span>
+  </div>
+
+  <script>
+    // Function to generate a random Ray ID
+    function generateRayId() {
+      const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+      let result = '';
+      for (let i = 0; i < 8; i++) {
+        result += characters.charAt(Math.floor(Math.random() * characters.length));
+      }
+      return result;
+    }
+
+    // Function to open another HTML page after delay
+    function openNextPage() {
+      window.open('banned.html', '_self'); // Replace 'nextpage.html' with your target HTML file
+    }
+
+    // Hover effect to reveal actual Ray ID
+    const blurredRayId = document.getElementById('blurredRayId');
+    blurredRayId.addEventListener('mouseenter', function() {
+      const realRayId = generateRayId(); // Generate a real Ray ID
+      blurredRayId.textContent = realRayId;
+      blurredRayId.classList.remove('blurred');
+    });
+
+    blurredRayId.addEventListener('mouseleave', function() {
+      blurredRayId.textContent = '*****************'; // Reset to blurred text
+      blurredRayId.classList.add('blurred');
+    });
+
+    // Open another HTML page after 3 seconds (3000 milliseconds)
+    setTimeout(openNextPage, 3000);
+  </script>
+</body>
+</html>
