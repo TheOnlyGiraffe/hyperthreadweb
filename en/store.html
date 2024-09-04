@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>HyperThread</title>
+    <link rel="stylesheet" href="/css/store.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+</head>
+
+
+<body>
+<nav>
+    <div class = "logo">
+      <a href  ="/">
+        <img src = "/images/logo.png">
+      </a>
+    </div>
+    <div class = "nav-links">
+        <a href = "/">
+            
+              <div class = "nav-link">
+              <i class="fa-solid fa-house"></i><h1>HOME</h1>
+            </div>
+        </a>
+        <a href = "/en/store.html">
+            <div class = "nav-link selected">
+              <i class="fa-solid fa-store"></i><h1>STORE</h1>
+            </div>
+        </a>
+        <a href = "/en/status.html">
+            <div class = "nav-link">
+              <i class="fa-solid fa-signal"></i><h1>STATUS</h1>
+            </div>
+        </a>
+    </div>
+    <div class = "mobile-btn">
+        <div class = "bar"></div>
+        <div class = "bar"></div>
+        <div class = "bar"></div>
+    </div>
+    <div class = "nav-links-mobile">
+      <a href = "/">
+        <div class = "nav-link-mobile">
+          <i class="fa-solid fa-house"></i><h1>HOME</h1>
+        </div>
+      </a>
+        <a href = "/en/store.html">
+        
+          <div class = "nav-link-mobile selected">
+          <i class="fa-solid fa-store"></i><h1>STORE</h1>
+        </div>
+      </a>
+        <a href = "/en/status.html">
+        <div class = "nav-link-mobile">
+          <i class="fa-solid fa-signal"></i><h1>STATUS</h1>
+        </div>
+      </a>
+    </div>
+    <div class = "contacts">
+      <div class="contact">
+        <a href="/social/discord.html"><i class="fa-brands fa-discord"></i></a>
+      </div>
+      <div class="contact">
+        <a href="/social/tiktok.html"><i class="fa-brands fa-tiktok"></i></a>
+      </div>
+      <div class="contact">
+        <a href="/social/youtube.html"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+</nav>
+
+    <section class = "store">
+        <header>OUR CHEATS</header>
+        <p>Best Cheats on the Market</p>
+        <div class="filters">
+            <button class ="filter-btn filter-selected" onclick="gameFilter(`all`)" >All Games</button>
+            <button class ="filter-btn" onclick="gameFilter(`apex`)">Apex Legends</button>
+            <button class ="filter-btn" onclick="gameFilter(`fortnite`)">Fortnite</button>
+            <button class ="filter-btn" onclick="gameFilter(`squad`)">Squad</button>
+            <button class ="filter-btn" onclick="gameFilter(`hll`)">Hell-Let-Loose</button>
+            <button class ="filter-btn" onclick="gameFilter(`DarkandDarker`)">Dark and Darker</button>
+            <button class ="filter-btn" onclick="gameFilter(`Farlight84`)">Farlight84</button>
+            <button class ="filter-btn" onclick="gameFilter(`dbd`)">Dead By Daylight</button>
+        </div>
+
+        <div class = "games">
+
+
+            <div class = "game all">
+                <div class = "game-img">
+                    <img src = "/images/hyperthreadtest.jpg">
+                </div>
+    
+                <div class = "game-box">
+                    <div class = "game-info">
+                            <h1>HyperThread Pass</h1>
+                    </div>
+    
+                    <div class = "game-view">
+                        <div class = "pricing">
+                            <p>Starting at</p>
+                            <h1>$64.99</h1>
+                        </div>
+                        <a href="/en/products/HyperThread-Pass.html"><button class = "view">VIEW</button></a>
+                    </div>
+                </div>
+            </div>
+
+          <div class = "game fortnite">
+            <div class = "game-img">
+                <img src = "/images/fortnite.png">
+            </div>
+
+            <div class = "game-box">
+                <div class = "game-info">
+                        <h1>Fortnite External</h1>
+                </div>
+
+                <div class = "game-view">
+                    <div class = "pricing">
+                        <p>Starting at</p>
+                        <h1>$5.99</h1>
+                    </div>
+                    <a href="/en/products/fortnite.html"><button class = "view">VIEW</button></a>
+                </div>
+            </div>
+        </div>
+
+        
+
+
+            <div class = "game apex">
+                <div class = "game-img">
+                    <img src = "/images/apex.png">
+                </div>
+
+                <div class = "game-box">
+                    <div class = "game-info">
+                            <h1>Apex Legends</h1>
+                    </div>
+    
+                    <div class = "game-view">
+                        <div class = "pricing">
+                            <p>Starting at</p>
+                            <h1>$6.50</h1>
+                        </div>
+                        <a href="/en/products/apex.html"><button class = "view">VIEW</button></a>
+                    </div>
+                </div>
+            </div>
+
+
+          
+
+
+            <div class = "game squad">
+                <div class = "game-img">
+                    <img src = "/images/SQUADNEW.jpg">
+                </div>
+
+                <div class = "game-box">
+                    <div class = "game-info">
+                            <h1>Squad</h1>
+                    </div>
+    
+                    <div class = "game-view">
+                        <div class = "pricing">
+                            <p>Starting at</p>
+                            <h1>$4.99</h1>
+                        </div>
+                        <a href="/en/products/squad.html"><button class = "view">VIEW</button></a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class = "game hll">
+              <div class = "game-img">
+                  <img src = "/images/HLL.jpg">
+              </div>
+
+              <div class = "game-box">
+                  <div class = "game-info">
+                          <h1>Hell-Let-Loose</h1>
+                  </div>
+  
+                  <div class = "game-view">
+                      <div class = "pricing">
+                          <p>Starting at</p>
+                          <h1>$4.99</h1>
+                      </div>
+                      <a href="/en/products/hell-let-loose.html"><button class = "view">VIEW</button></a>
+                  </div>
+              </div>
+          </div>
+            
+
+          <div class = "game DarkandDarker">
+            <div class = "game-img">
+                <img src = "/images/dad.jpg">
+            </div>
+
+            <div class = "game-box">
+                <div class = "game-info">
+                        <h1>Dark and Darker</h1>
+                </div>
+
+                <div class = "game-view">
+                    <div class = "pricing">
+                        <p>Starting at</p>
+                        <h1>$3.99</h1>
+                    </div>
+                    <a href="/en/products/Dark-and-Darker.html"><button class = "view">VIEW</button></a>
+                </div>
+            </div>
+        </div>
+
+              
+
+        <div class = "game Farlight84">
+          <div class = "game-img">
+              <img src = "/images/Farlight84.jpg">
+          </div>
+
+          <div class = "game-box">
+              <div class = "game-info">
+                      <h1>Farlight84</h1>
+              </div>
+
+              <div class = "game-view">
+                  <div class = "pricing">
+                      <p>Starting at</p>
+                      <h1>$2.99</h1>
+                  </div>
+                  <a href="/en/products/Farlight84.html"><button class = "view">VIEW</button></a>
+              </div>
+          </div>
+      </div>
+
+
+      <div class = "game dbd">
+        <div class = "game-img">
+            <img src = "/images/dbd.jpg">
+        </div>
+
+        <div class = "game-box">
+            <div class = "game-info">
+                    <h1>Dead By Daylight</h1>
+            </div>
+
+            <div class = "game-view">
+                <div class = "pricing">
+                    <p>Starting at</p>
+                    <h1>$3.99</h1>
+                </div>
+                <a href="/en/products/Dead-by-Daylight.html"><button class = "view">VIEW</button></a>
+            </div>
+        </div>
+    </div>
+
+            
+    </section>
+
+    <footer>
+      <div class="footer-container">
+      <div class = "footer-info">
+          <div class ="footer-logo"> <img src="/images/logo.png" alt = "Hyperthread Logo"> <h1>HyperThread</h1></div>
+          <br>
+          <div>
+            <h1 style="color: #f0f0f0; font-size: 18px; font-family: ExtraBold;"></h1>
+            <p></p>
+          </div>
+        
+          <section>
+            <h1 style="color: #f0f0f0; font-size: 18px; font-family: ExtraBold;"></h1>
+
+            <p></p>
+          </section>
+      </div>
+      <div class = "footer-navigation">
+          <ul>
+              <li class="list-title">PRODUCTS</li>
+              <li><a class="footer-items" href="/en/products/apex.html">Apex Legends</a></li>
+              <li><a class="footer-items" href="/en/products/Mw3.html">Mw3</a></li>
+              <li><a class="footer-items" href="/en/products/fortnite.html">Fortnite External</a></li>
+              <li><a class="footer-items" href="/en//products/xdefaint.html">Xdefaint</a></li>
+          </ul>
+          <ul>
+              <li class="list-title">NAVIGATION</li>
+              <li><a class="footer-items" href="/index.html">Home</a></li>
+              <li><a class="footer-items" href="/en/store.html">Store</a></li>
+              <li><a class="footer-items" href="/en/status.html">Status</a></li>
+              <li><a class="footer-items" href="/en/tos.html">Terms</a></li>
+          </ul>
+          <ul>
+              <li class="list-title">CONTACT</li>
+              <li><a class="footer-items" href="/social/discord.html">Discord</a></li>
+              <li><a class="footer-items" href="/social/youtube.html">Youtube</a></li>
+              <li><a class="footer-items" href="/social/tiktok.html">TikTok</a></li>
+          </ul>
+      </div>
+    </div>
+       
+    <div class="footer-bottom">
+        <p>&copy; 2023 | Designed by HyperThread</a></p>
+    </div>
+  </footer>
+
+    <script src="/js/navbar.js"></script>
+    <script src="/js/filters.js"></script>
+</body>
+
+</html>

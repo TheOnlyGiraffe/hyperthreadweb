@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Reseller Application - HyperThread</title>
+    <link rel="stylesheet" href="/css/instructions.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #111216;
+            --footer: #0d0e11;
+            --blue: #d92d2d;
+            --white: #f0f0f0;
+            --dark: #1a1b21;
+            --grey: #32343e;
+            --text: #838383;
+            --green: #57a959;
+            --purple: #5151ba;
+            --red: #993535;
+        }
+
+        @font-face {
+            font-family: ExtraBold;
+            src: url(../fonts/Inter-ExtraBold.ttf);
+        }
+
+        @font-face {
+            font-family: Bold;
+            src: url(../fonts/Inter-Bold.ttf);
+        }
+
+        @font-face {
+            font-family: Medium;
+            src: url(../fonts/Inter-Medium.ttf);
+        }
+
+        @font-face {
+            font-family: Light;
+            src: url(../fonts/Inter-Medium.ttf);
+        }
+
+        body, html {
+            background-color: var(--bg);
+            background-image: url(/images/backround.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100%;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 6rem auto 2rem auto; /* Increased top margin */
+            padding: 2rem;
+            background-color: var(--dark);
+            border-radius: 8px;
+            color: var(--white);
+        }
+
+        .job-description ul, .application-form ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .job-description ul li, .application-form ul li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .job-description ul li:before {
+            content: '\f061'; /* FontAwesome arrow */
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--red);
+        }
+
+        .application-form input, .application-form textarea {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: 1px solid var(--red);
+            border-radius: 4px;
+            background-color: var(--dark);
+            color: var(--white);
+        }
+
+        .application-form textarea {
+            height: 6rem;
+        }
+
+        .application-form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--white);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="/">
+                <img src="/images/logo.png" alt="HyperThread Logo">
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="/">
+                <div class="nav-link">
+                    <i class="fa-solid fa-house"></i><h1>HOME</h1>
+                </div>
+            </a>
+            <a href="/en/store.html">
+                <div class="nav-link">
+                    <i class="fa-solid fa-store"></i><h1>STORE</h1>
+                </div>
+            </a>
+            <a href="/en/status.html">
+                <div class="nav-link">
+                    <i class="fa-solid fa-signal"></i><h1>STATUS</h1>
+                </div>
+            </a>
+        </div>
+        <div class="mobile-btn">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="nav-links-mobile">
+            <a href="/">
+                <div class="nav-link-mobile selected">
+                    <i class="fa-solid fa-house"></i><h1>HOME</h1>
+                </div>
+            </a>
+            <a href="/en/store.html">
+                <div class="nav-link-mobile">
+                    <i class="fa-solid fa-store"></i><h1>STORE</h1>
+                </div>
+            </a>
+            <a href="/en/status.html">
+                <div class="nav-link-mobile">
+                    <i class="fa-solid fa-signal"></i><h1>STATUS</h1>
+                </div>
+            </a>
+        </div>
+        <div class="contacts">
+            <div class="contact">
+                <a href="/social/discord.html"><i class="fa-brands fa-discord"></i></a>
+            </div>
+            <div class="contact">
+                <a href="/social/tiktok.html"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+            <div class="contact">
+                <a href="/social/youtube.html"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="content">
+        <div class="container">
+            <section class="job-description">
+                <h1>Job Description</h1>
+                <p>Hyperthread is presently looking for individuals to become part of our team in the capacity of Resellers. As a cheats reseller, you will have the opportunity to sell our cheats to your community and make a very good profit margin. If you have strong sales skills and a passion for cheating software, we want to hear from you!</p>
+                <h2>What You'll Do</h2>
+                <ul>
+                    <li>Sell our cheats to your community.</li>
+                    <li>Foster and sustain customer relationships to drive repeat business and secure referrals.</li>
+                    <li>Offer technical support and troubleshooting help to customers as required.</li>
+                </ul>
+                <h2>What You'll Need</h2>
+                <ul>
+                    <li>Strong sales skills and a proven track record of success in selling cheats.</li>
+                    <li>A pre-existing monthly turnover is advantageous.</li>
+                </ul>
+                <h2>What We Offer</h2>
+                <ul>
+                    <li>Up to 65% discount on the original price.</li>
+                    <li>Very good profit margin.</li>
+                </ul>
+            </section>
+
+            <section class="application-form">
+                <h1>Reseller Application Form</h1>
+                <form id="reseller-form">
+                    <label for="Discord">Your Discord Tag (If it's not valid, your application will be ignored):</label>
+                    <input type="text" id="Discord" name="Discord" required>
+                    
+                    <label for="website">The link to your website or community:</label>
+                    <input type="url" id="website" name="website" required>
+                    
+                    <label for="discordserver">The link to your Discord Server:</label>
+                    <input type="url" id="discordserver" name="discordserver" required>
+
+                    <label for="region">Your operation region?</label>
+                    <input type="text" id="region" name="region" required>
+                    
+                    <label for="turnover">Actual average monthly turnover?</label>
+                    <input type="text" id="turnover" name="turnover" required>
+                    
+                    <label for="previous-work">Have you ever worked for other providers? If yes, which one?</label>
+                    <input type="text" id="previous-work" name="previous-work">
+                    
+                    <label for="current-products">What products are you currently reselling?</label>
+                    <input type="text" id="current-products" name="current-products">
+                    
+                    <label for="HyperThread-products">Which Hyperthread products are you planning to resell?</label>
+                    <input type="text" id="HyperThread-products" name="HyperThread-products">
+                    
+                    <input type="submit" value="Submit Application">
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <div class="footer-logo">
+                    <img src="/images/logo.png" alt="Hyperthread Logo">
+                    <h1>HyperThread</h1>
+                </div>
+                <br>
+                <div>
+                    <h1 style="color: #f0f0f0; font-size: 18px; font-family: ExtraBold;"></h1>
+                    <p></p>
+                </div>
+                <section>
+                    <h1 style="color: #f0f0f0; font-size: 18px; font-family: ExtraBold;"></h1>
+                    <p></p>
+                </section>
+            </div>
+            <div class="footer-navigation">
+                <ul>
+                    <li class="list-title">PRODUCTS</li>
+                    <li><a class="footer-items" href="/en/products/apex.html">Apex Legends</a></li>
+                    <li><a class="footer-items" href="/en/products/Mw3.html">Mw3</a></li>
+                    <li><a class="footer-items" href="/en/products/fortnite.html">Fortnite External</a></li>
+                    <li><a class="footer-items" href="/en/products/xdefaint.html">Xdefaint</a></li>
+                </ul>
+                <ul>
+                    <li class="list-title">NAVIGATION</li>
+                    <li><a class="footer-items" href="/index.html">Home</a></li>
+                    <li><a class="footer-items" href="/en/store.html">Store</a></li>
+                    <li><a class="footer-items" href="/en/status.html">Status</a></li>
+                    <li><a class="footer-items" href="/en/tos.html">Terms</a></li>
+                </ul>
+                <ul>
+                    <li class="list-title">CONTACT</li>
+                    <li><a class="footer-items" href="/social/discord.html">Discord</a></li>
+                    <li><a class="footer-items" href="/social/youtube.html">Youtube</a></li>
+                    <li><a class="footer-items" href="/social/tiktok.html">TikTok</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 | Designed by HyperThread</p>
+        </div>
+    </footer>
+
+    <script src="/js/navbar.js"></script>
+    <script src="/js/webhook.js"></script>
+    <script>
+      
+    </script>
+</body>
+</html>
+    

@@ -1,0 +1,495 @@
+:root {
+    --bg: #111216;
+    --footer: #0d0e11;
+    --blue: #d92d2d;
+    --white: #f0f0f0;
+    --dark: #1a1b21;
+    --grey: #32343e;
+    --text: #838383;
+    --green: #57a959;
+    --purple: #5151ba;
+    --red: #993535;
+}
+
+
+@font-face {
+    font-family: ExtraBold;
+    src: url(../fonts/Inter-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: Bold;
+    src: url(../fonts/Inter-Bold.ttf);
+}
+
+ @font-face {
+    font-family: Medium;
+    src: url(../fonts/Inter-Medium.ttf);
+}
+@font-face {
+    font-family: Light;
+    src: url(../fonts/Inter-Medium.ttf);
+}
+
+
+ 
+
+
+body,
+html {
+    background-color: var(--bg);
+    background-image: url(/images/backround.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed; 
+    margin: 0;
+    overflow-x: hidden;
+}
+
+html {
+    height: 100%;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+  
+
+a, ul, li, h1 {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* NAVBAR START*/
+
+nav {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(100%);
+  padding: 0;
+  z-index: 99;
+  height: 3.5rem;
+  background-color: rgba(13, 14, 17, 0.9);
+}
+
+.nav path {
+  fill: var(--white);
+}
+
+.nav g {
+  stroke: var(--white);
+}
+
+.selected path {
+  fill: var(--blue)
+}
+
+.selected g {
+  stroke: var(--blue)
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  width: 33%;
+}
+
+.logo:hover {
+  transform: scale(1.25); /* Enlarge image by 1.5 times */
+}
+
+.logo img   {
+  height: 2.5rem;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 33%;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  margin: 0 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  box-shadow: none; /* Remove shadow on click */
+  transform: translateY(4px); /* Move button down to simulate press */
+}
+
+.nav-link h1 {
+  color: var(--white);
+  font-family: Bold;
+  font-size: 1rem;
+}
+
+.selected h1 {
+  color: var(--blue)
+}
+
+.nav-link svg{
+  margin-right: .5rem;
+}
+
+.contact {
+  transition: transform 0.3s ease; /* Smooth transformation effect */
+  transform: scale(1.5)
+}
+
+.contact:hover {
+  transform: scale(1.75); /* Enlarge image by 1.5 times */
+}
+
+.contacts {
+  display: flex;
+  justify-content: center;
+  width: 33%;
+  display: flex; /* This spell turns the main div into a Flex container */
+  flex-direction: row; /* Directs the child divs to line up in a row */
+  gap: 2rem;
+}
+
+.main-image-logo-container {
+  position: relative;
+}
+
+.main-image-logo {
+  animation: descend 1.5s ease-out forwards; /* Apply the animation to your logo */
+  z-index: -1; /* Places the image behind the text */
+}
+
+@keyframes descend {
+  from {
+    transform: translateY(-100%); /* Start from above the viewport */
+    opacity: 0; /* Start invisible */
+  }
+  to {
+    transform: translateY(0); /* End at the logo's natural position */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+
+.contacts a:not(:first-child) {
+  margin-left: 1rem;
+}
+
+.contact path{
+  fill: var(--white);
+}
+.contact g {
+  stroke: var(--white);
+}
+
+
+.nav-links-mobile {
+  display: none;
+}
+
+.mobile-btn {
+  display: none;
+  padding: 0 2rem;
+  z-index: 99;
+}
+
+.mobile-active .bar:nth-child(1){
+  transform: rotate(-45deg) translate(-3px, 4px);
+
+}
+
+.mobile-active .bar:nth-child(2){
+  display: none;
+}
+.mobile-active .bar:nth-child(3){
+  transform: rotate(45deg) translate(-3px, -4px);
+}
+
+.nav-links-mobile {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  top: 3.5rem;
+  left: 0;
+  background-color: rgba(13, 14, 17, 1);
+  height: 0;
+  width: 100%;
+  overflow: hidden;
+  transition: height ease-in-out 150ms;
+}
+
+.nav-link-mobile {
+  font-family: Bold;
+  color: var(--white);
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  padding: 1rem 0;
+  flex-direction: row;
+  justify-content: center;
+  border-top: var(--dark) thin solid;
+  align-items: center;
+}
+
+.nav-link-mobile svg{
+  margin-right: .5rem;
+}
+
+.mobile-active + .nav-links-mobile {
+  height: 20rem;
+}
+
+.bar {
+  width: 2rem;
+  margin: 8px 0;
+  height: 2px;
+  background-color: var(--white);
+}
+
+
+@media screen and (max-width: 1000px ){
+
+  .nav-links {
+      display: none;
+  }
+  .mobile-btn {
+      display: block;
+  }
+}
+
+nav i {
+  color: white;
+  margin-right: 5px;
+}
+
+nav .selected i {
+  color: var(--blue)
+}
+
+/* NAVBAR END*/
+
+
+/* TOS START */
+
+.tos {
+  width: 90%;
+  max-width: 40rem;
+  margin: 10rem auto 10rem auto;
+}
+
+.tos header {
+  font-family: Bold;
+  font-size: 3rem;
+  color: var(--blue);
+  text-align: center;
+}
+
+.tos h1 {
+  margin-top: 3rem;
+  color: var(--white);
+  font-family: Medium;
+  font-weight: lighter;
+}
+
+.tos p {
+  color: var(--text);
+  font-family: Medium;
+}
+
+.background {
+  border-radius: 1rem;
+  padding: 1.2rem;
+  border: var(--blue) thin solid;
+  background-color: var(--dark);
+ }
+
+/* TOS END */
+
+
+/* FOOTER START*/
+
+footer {
+    position: relative;
+    background-color: var(--footer);
+    bottom: 0;
+    margin-top: auto;
+    width: calc(100% - 20rem);
+    padding: 2rem 10rem 0rem 10rem;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: auto;
+    max-width: 150rem;
+}
+
+.footer-info {
+    width: 25rem;
+    margin-right: 3rem;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.footer-logo img {
+    height: 35px;
+}
+
+.footer-logo h1 {
+    color: var(--white);
+    font-size: 18px;
+    margin: 0 0 0 15px;
+    font-family: ExtraBold;
+}
+
+.footer-info p{
+    color: var(--text);
+    font-family: Medium;
+}
+
+.footer-navigation {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-left: auto;
+    width: 40rem;
+}
+
+.footer-navigation ul {
+    margin: 6px 1rem 0 1rem;
+    list-style-type: none;
+}
+
+
+.list-title {
+    margin-bottom: 15px;
+    font-family: ExtraBold;
+    color: var(--white);
+}
+
+.footer-navigation ul li a {
+    color: var(--text);
+}
+
+.footer-navigation ul li:not(.list-title) {
+    color: var(--text);
+    margin: 7px 0;
+    font-family: Medium;
+}
+
+
+.footer-bottom {
+    font-family: Light;
+    color: var(--text);
+    width: 100%;
+    justify-content: center;
+    margin-top: 3rem;
+    border-top: thin solid var(--grey);
+    display: flex;
+  }
+  
+  .footer-bottom a {
+    color: var(--white);
+  }
+
+
+
+@media only screen and (max-width: 1000px) {
+  footer {
+    width: calc(100% - 20rem);
+    padding: 4rem 10rem;
+  }
+
+    .footer-info {
+        margin: auto;
+        margin-bottom: 2rem;
+    }
+    .footer-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+
+    }
+    .footer-navigation {
+        margin: 0;
+        width: 100%;
+    }
+  }
+
+  
+@media only screen and (max-width: 700px) {
+  footer {
+    width: calc(100% - 10rem);
+    padding: 4rem 5rem;
+  }
+
+  .footer-container {
+    width: 100%;
+  }
+
+  .footer-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+  }
+
+    .footer-navigation {
+        align-items: center;
+        flex-direction: column;
+    }
+    .footer-navigation ul {
+      margin: 1rem 0;
+      text-align: center;
+      padding: 0;
+
+      list-style-type: none;
+  }
+
+  .footer-bottom p {
+    text-align: center;
+  }
+
+
+  }
+
+  .footer-items {
+    color: #838383; /* The original, unenchanted color */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* This ensures a smooth transition for color and text-decoration */
+  }
+  
+  .footer-items:hover {
+    color: white; /* Transforms the color to white upon hover */
+    text-decoration: underline; /* Bestows an underline upon hover */
+  }
+
+  /* FOOTER END*/

@@ -1,0 +1,62 @@
+/* Container for the video and text */
+.cheats-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 55vh; /* Full viewport height */
+    width: 100%;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+  }
+  
+  .info {
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 70rem; /* Adjust as needed */
+  }
+  
+  .info-text {
+    text-align: center; /* Center text */
+    color: var(--text);
+    margin-bottom: 1rem; /* Space between text and video */
+  }
+  
+  .info-text h1 {
+    font-family: Bold;
+    font-size: 2rem;
+    color: var(--white);
+  }
+  
+  .info-text p {
+    font-family: Medium;
+    color: var(--text);
+  }
+  
+  .info-media {
+    border-radius: 1rem;
+    border: thin solid var(--blue);
+    width: 100%;
+    max-width: 35rem; /* Ensure the video doesn't grow too large */
+    aspect-ratio: 16/9;
+    background-color: var(--dark);
+  }
+  
+  .info-media video {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Responsive design */
+  @media screen and (max-width: 1050px) {
+    .info {
+      padding: 1rem; /* Add padding on smaller screens */
+    }
+  
+    .info-text {
+      margin-bottom: 0.5rem; /* Adjust margin between text and video */
+    }
+  }
+  
