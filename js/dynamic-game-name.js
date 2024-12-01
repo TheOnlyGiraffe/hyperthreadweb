@@ -2,9 +2,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const gameNames = [
       "Fornite", 
       "Apex Legends", 
-      "Squad", 
       "Rust", 
-      "EFT", 
+   
     ];
   
     const textElement = document.getElementById("dynamic-game-name");

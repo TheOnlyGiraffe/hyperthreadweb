@@ -31,7 +31,7 @@
   </div>
 
   <script>
-    // Function to generate a random Ray ID
+  
     function generateRayId() {
       const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
       let result = '';
@@ -41,26 +41,25 @@
       return result;
     }
 
-    // Function to redirect to Discord server after delay
+
     function redirectToDiscord() {
-      const discordInviteURL = 'https://discord.gg/hyperthread'; // Replace with your Discord server invite URL
+      const discordInviteURL = 'https://discord.gg/hyperthread'; 
       window.location.href = discordInviteURL;
     }
 
-    // Hover effect to reveal actual Ray ID
+   
     const blurredRayId = document.getElementById('blurredRayId');
     blurredRayId.addEventListener('mouseenter', function() {
-      const realRayId = generateRayId(); // Generate a real Ray ID
+      const realRayId = generateRayId(); 
       blurredRayId.textContent = realRayId;
       blurredRayId.classList.remove('blurred');
     });
 
     blurredRayId.addEventListener('mouseleave', function() {
-      blurredRayId.textContent = '*****************'; // Reset to blurred text
+      blurredRayId.textContent = '*****************';
       blurredRayId.classList.add('blurred');
     });
 
-    // Redirect after 3 seconds (3000 milliseconds)
     setTimeout(redirectToDiscord, 3000);
   </script>
 </body>
